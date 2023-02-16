@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/new") <button>New Message</button>
+  p Welcome to #{title}
+  ul 
+    each message in messages
+      li
+      ul
+        each val, key in message 
+          li= val
